@@ -28,7 +28,9 @@ public class Order {
 
     private Date created;  // Mis ajal loodud ostukorv
 
-    private double sum; /// Mis ostukorvi summa on
+    // Double võib olla null enne summa arvutamist; primitive double saaks vaikimisi väärtuseks 0.0.
+    // Väli hoiab tellimuse kogusummat, mis arvutatakse toodete hindadest enne salvestamist.
+    private Double sum; /// Mis ostukorvi summa on
 
     private PaymentState state;    // Mis seisu makse on!!
  }
